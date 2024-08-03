@@ -1,79 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dialog Example</title>
-  <style>
-    .dialog-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    .dialog {
-      background-color: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      width: 100%;
-    }
-    .dialog-header {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-    .dialog-content {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-    .dialog-buttons {
-      display: flex;
-      justify-content: flex-end;
-    }
-    .dialog-button {
-      border: none;
-      border-radius: 4px;
-      padding: 10px 20px;
-      margin-left: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .cancel-button {
-      background-color: #f0f0f0;
-      color: #333;
-    }
-    .cancel-button:hover {
-      background-color: #e0e0e0;
-    }
-    .join-button {
-      background-color: #0088cc;
-      color: #fff;
-    }
-    .join-button:hover {
-      background-color: #007bb5;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Study Squad Pro</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .dialog {
+            width: 90vw;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: slideIn 0.5s ease-out;
+            text-align: center;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .content {
+            padding: 20px;
+        }
+        .highlight-box {
+            background-color: #007bff;
+            border-radius: 10px;
+            padding: 10px 15px;
+            color: #fff;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        .content p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #333;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #28a745; /* Green color */
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #218838; /* Darker green color */
+            transform: translateY(-2px);
+        }
+        .telegram-link {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #0088cc; /* Telegram color */
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .telegram-link:hover {
+            background-color: #007ab8; /* Darker Telegram color */
+            transform: translateY(-2px);
+        }
+        .telegram-link img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-  <div class="dialog-container">
     <div class="dialog">
-      <div class="dialog-header">Join Our Telegram Channel</div>
-      <div class="dialog-content">Stay updated with the latest news and updates by joining our Telegram channel.</div>
-      <div class="dialog-buttons">
-        <button class="dialog-button cancel-button" onclick="closeDialog()">Cancel</button>
-        <a href="https://t.me/prime_modz" target="_blank">
-          <button class="dialog-button join-button">Join Telegram</button>
-        </a>
-      </div>
+        <div class="header">
+            <h1>Alpha Study Squad Pro</h1>
+        </div>
+        <div class="content">
+            <div class="highlight-box">
+                Sᴛᴀʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴀɴᴅ ɢᴇᴛ ᴛʜᴇ ʟᴀᴛᴇsᴛ ᴜᴘᴅᴀᴛᴇs.
+            </div>
+            <p>✨ Aɴᴅʀᴏɪᴅ 14 Sᴜᴘᴘᴏʀᴛᴇᴅ</p>
+            <p>✨ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴋᴇʏ</p>
+            <p>✨ ᴀʟʟ ᴀᴅs ʀᴇᴍᴏᴠᴇᴅ</p>
+            <p class="bold-text">❤️ ᴀᴅs ғʀᴇᴇ ᴠᴇʀsɪᴏɴ ᴛᴏ sᴀᴠᴇ ʏᴏᴜʀ ᴛɪᴍᴇ ᴀɴᴅ ғᴏᴄᴜs ᴏɴ sᴛᴜᴅʏ ❤️</p>
+            <a href="https://t.me/prime_modz" class="button">𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 𝗧𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗</a>
+        </div>
     </div>
-  </div>
-
-  <script>
-    function closeDialog() {
-      document.querySelector('.dialog-container').style.display = 'none';
-    }
-  </script>
+    <a href="https://t.me/Prime_Modz" class="telegram-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo">
+        Join us on Telegram
+    </a>
 </body>
 </html>
